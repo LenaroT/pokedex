@@ -5,14 +5,14 @@
 }
 
 body {
-    background-color: #f6f8fc;
+    background-color: #fc0404;
 }
 
 .content {
     height: 100vh;
     width: 100vw;
     padding: 1rem;
-    background-color: #fff;
+    background-color: #ff7e7e;
 }
 
 @media screen and (min-width: 992px) {
