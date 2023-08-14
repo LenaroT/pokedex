@@ -26,21 +26,14 @@ function convertPokemonDescriptionToHtml(pokemon){
                 <div class="detail-row">
                     <div class="detail-topic">Egg Group : </div>
                     <ol class="detail-egg-group">
-                        ${pokemon.egg_group.map((egg_type) => `<li class="egg-type">${egg_type}</li>`).join(',')}
+                        ${pokemon.egg_group.map((egg_type) => `<li class="egg-type">${egg_type}</li>`).join('')}
                     </ol>
                 </div>
                 <div class="detail-row">
                     <span class="detail-topic">Habitat : </span>
                     <span class="detail-result habitat">${pokemon.habitat}</span>
                 </div>
-                <div class="detail-row">
-                    <span class="detail-topic">Height : </span>
-                    <span class="detail-result">${pokemon.height} dm</span>
-                </div>
-                <div class="detail-row">
-                    <span class="detail-topic">Weight : </span>
-                    <span class="detail-result">${pokemon.weight} hg</span>
-                </div>
+
                 <div class="detail-row">
                     <span class="detail-topic">Abilities : </span>
                     <ol class="abilities-list">
@@ -74,7 +67,7 @@ function openCardAnimation(){
 
 function removeCardAnimation(){    
     var id = setInterval(remove, 5);
-    var pos = 50
+    var pos = 10
     function remove(){
         if(pos == 102){
             selectedPokemon.parentElement.removeChild(selectedPokemon)
@@ -107,7 +100,6 @@ listPokemon.addEventListener('click', function(e) {
         const pokemonSelected = e.target.id
         
         if(pokemonSelected && pokemonSelected !== 'pokemonList'){
-            //debugger
             pokeApi.getPokemonDescription(pokemonSelected).then((pokemon) => {
                 const newHtml = convertPokemonDescriptionToHtml(pokemon)
                 listPokemon.innerHTML += newHtml
@@ -130,7 +122,6 @@ listPokemon.addEventListener('click', function(e) {
 })
 
 
-//#region  GET USER SWIPE
 listPokemon.addEventListener("touchstart", startTouch, { passive: true });
 listPokemon.addEventListener("touchmove", moveTouch, { passive: true });
 
@@ -165,5 +156,3 @@ function moveTouch(e) {
         e.preventDefault();
     }
 }
-
-//#endregion

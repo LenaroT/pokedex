@@ -83,9 +83,9 @@
 
 .description-animation{
     position: relative;
-    right: -10rem;
+    right: -8rem;
     margin-bottom: -1rem;
-    scale: 1.25;
+    scale: 2.25;
 }
 
 .description-details-bg{
@@ -129,6 +129,16 @@
 
 .habitat{
     text-transform: capitalize;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: .75rem 1rem;
+    border: 1px solid rgb(231, 231, 231);
+    background-color: rgb(244, 244, 244);
+    border-radius: 1rem;
+    margin: .25rem;
+    text-transform: capitalize;
+    width: 12rem;
 }
 
 .detail-egg-group{
@@ -143,6 +153,17 @@
 .egg-type{
     text-transform: capitalize;
     word-break: keep-all;
+    text-transform: capitalize;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: .75rem 1rem;
+    border: 1px solid rgb(231, 231, 231);
+    background-color: rgb(244, 244, 244);
+    border-radius: 1rem;
+    margin: .25rem;
+    text-transform: capitalize;
+    width: 12rem;
 }
 
 .abilities-list{
@@ -159,7 +180,8 @@
     flex-direction: row;
     justify-content: center;
     padding: .75rem 1rem;
-    border: 1px solid gray;
+    border: 1px solid rgb(231, 231, 231);
+    background-color: rgb(244, 244, 244);
     border-radius: 1rem;
     margin: .25rem;
     text-transform: capitalize;
